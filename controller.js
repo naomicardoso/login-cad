@@ -17,7 +17,7 @@ function acessar(){
    }
     
     
-   //Função que armazena, em array, nome na tela de cadastro
+   //funçao que armazena nome na tela de cadastro
     
    var dadosLista = [];
     
@@ -54,4 +54,11 @@ function acessar(){
     
     
     }
+
+    //Função para excluir
+ 
+  function excluir(i){
+   dadosLista.splice((i-1), 1)
+   document.getElementById('tabela').deleteRow(i);
+ }
    
