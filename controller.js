@@ -1,6 +1,6 @@
 //Validar acesso em tela de login
  
-function acessar (){
+function acessar() {
     let loginEmail = document.getElementById("loginEmail").value;
     let loginSenha = document.getElementById("loginSenha").value;
  
@@ -8,7 +8,7 @@ function acessar (){
         alert("Favor preencher todos os campos");
     }else{
       //  alert("Campos preenchidos com sucesso");
-      window.location.href = "cadastro.html";
+      window.location.href = 'cadastro.html';
     }
    
 }
@@ -19,23 +19,34 @@ function acessar (){
 var dadosLista = [];
  
 function salvarUser(){
-    let nomeUser = document.getElementById("nomeUser").value;
+   let nomeUser = document.getElementById('nomeUser').value;
  
-    if(nomeUser){
-        dadosLista.push(nomeUser);
-        //console.log(dadoslista);
-        criarlista();
-        document.getElementById("nomeUser").value = "";
-    }else{
-        alert("Favor informa o nome cadastrado");
-    }
-}
+   if(nomeUser){
+    dadosLista.push(nomeUser);
+    //console.log(dadosLista);
+    crialista();
+    document.getElementById('nomeUser').value = "";
+ 
+   }else{
+    alert("Favor informar o nome cadastrado");
+ 
+ 
+   }
+}    
  
 //funçao para criar lista
-function criarlista(){
-    let tabela = document.getElementById('tabela').innerHTML = "<tr><th>nome Usuario</th><th>Açoes</th</tr>";
-    for(let i = 0; i <= (dadosLista.length-1); i++){
-        tabela += "<tr><td>"  +  dadosLista[i] + "</td><td></td></tr>";
-        document.getElementById('tabela').innerHTML = tabela;
-    }
+function crialista(){
+ let tabela = document.getElementById('tabela').innerHTML = "<tr><th>nome Usuario</th><th>Açoes</th</tr>";
+for(let i = 0; i <= (dadosLista.length-1); i++){
+   tabela += "<tr><td>"  +  dadosLista[i] + "</td><td><button type='button' onclick= 'editar(this.parentNode.parentNode.rowIndex)'>editar</button></td></tr>';
+   document.getElementById('tabela').innerHTML = tabela;
 }
+}
+
+
+
+     //FUNÇÃO PARA EDITAR NOMES DA LISTA
+     function editar (i){
+        document.getElementById('nomeUser').value = dadosLista[(i - 1)];
+        dadosLista.splice(dadoslista[(i - 1)], 1);
+     }
