@@ -56,6 +56,7 @@
 > # INFORMAÇÕES ADICIONAIS
 --------------------------------------------------------------------------------
 
-### Splice: altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
+### splice(): altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos.
 
 ----------------------------------------------------------------------------------------------
+*As informações deste README foram consultadas na internet em vários sites, incluindo chatGPT.*
