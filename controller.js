@@ -25,6 +25,13 @@ function acessar(){
    function salvarUser(){
       let nomeUser = document.getElementById('nomeUser').value;
       let email = document.getElementById('emailUser').value;
+
+      if (document.getElementById('emailUser').value == "" ||
+    document.getElementById('emailUser').value.indexOf('@') == -1 ||
+    document.getElementById('emailUser').value.indexOf('.') == -1) {
+    alert("Por favor, informar um E-mail válido");
+    return false;
+  }
     
       if(nomeUser && email){
        dadosLista.push(nomeUser);
@@ -70,4 +77,4 @@ function acessar(){
       
     
      }
-   
+     x
